@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8709581656.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col crowded-house">
+              <em> Everywhere you go, Always take the weather with you... </em>
+            </div>
+          </div>
+          <div id="nav-bar" class="cities">
+            <div class="row">
+              <div class="col-1">
+                <a href="#" id="lisbon-link">Lisbon</a>
+              </div>
+              <div class="col-1">
+                <a href="#" id="paris-link">Paris</a>
+              </div>
+              <div class="col-1">
+                <a href="#" id="sydney-link">Sydney</a>
+              </div>
+              <div class="col-2">
+                <a href="#" id="San Francisco-link">San Francisco</a>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="container-fluid">
+            <form class="d-flex" id="search-form">
+              <input
+                autofocus="on"
+                autocomplete="off"
+                type="search"
+                placeholder="Type city name..."
+                class="form-control me-2"
+                id="city-input"
+              />
+
+              <button
+                class="btn btn-outline-primary"
+                type="submit"
+                id="search-but"
+                value="Search"
+              >
+                Let's rock
+              </button>
+              <button
+                class="btn btn-outline-success"
+                id="my-location"
+                type="submit"
+              >
+                My location
+              </button>
+            </form>
+          </div>
+          <div class="weather-info">
+            <div class="whether-had">
+              <h1 id="city-name">Tel-Aviv</h1>
+              <div class="date-time" id="date-time">Sunday 14:00</div>
+              <div class="wheather-data">
+                <div class="row">
+                  <div class="col-8">
+                    <!-- <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                      alt="partly_cloudy icon"
+                      class="weather-icon"
+                    />-->
+                    <i class="fas fa-cloud-sun" id="sun-icon"></i>
+                    <h2 id="weather-status">clear</h2>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-8">
+                    <strong class="degrees" id="degrees">28</strong>
+                    <small class="degrees-unit-celsius" id="unit-celsius"
+                      >ºC
+                    </small>
+                    <span id="line-gap"> | </span>
+                    <small class="degrees-unit-farenheit" id="unit-farenheit"
+                      >ºF</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row forcast-rain-wind">
+            <div class="col-8">Precipitation 0%</div>
+            <div class="col-8">Humidity <span id="humidity"> 48</span>%</div>
+            <div class="col-8">Wind <span id="wind"> 13</span>km/h</div>
+          </div>
+
+          <!-- end "weather-info" div -->
+
+          <div class="row forcast">
+            <button class="trans"></button>
+            <div class="col-dayli-forcast-2 day">
+              Today
+              <div class="day-icon">
+                <i class="fas fa-cloud-sun" id="sun-s-icon"></i>
+                <div class="day-temp">28º</div>
+              </div>
+            </div>
+            <div class="col-dayli-forcast-2 day">
+              Tue
+              <div class="day-icon">
+                <i class="fas fa-sun" id="sun-s-icon"></i>
+                <div class="day-temp">29º</div>
+              </div>
+            </div>
+            <div class="col-dayli-forcast-2 day">
+              Fri
+              <div class="day-icon">
+                <i class="fas fa-cloud-sun" id="sun-s-icon"></i>
+                <div class="day-temp">28º</div>
+              </div>
+            </div>
+            <div class="col-dayli-forcast-2 day">
+              Sat
+              <div class="day-icon">
+                <i class="fas fa-sun" id="sun-s-icon"></i>
+                <div class="day-temp">29º</div>
+              </div>
+            </div>
+            <div class="col-dayli-forcast-2 day">
+              San
+              <div class="day-icon">
+                <i class="fas fa-cloud-sun" id="sun-s-icon"></i>
+                <div class="day-temp">28º</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- close card-body -->
+      </div>
+      <!-- close card -->
+    </div>
+    <!-- close container -->
+    <p class="footer">
+      Built by Cohen Ofra &nbsp |<span class="email">
+        <a
+          class="email"
+          href="mailto:ofraontheroad@gmail.com?cc=cc@mail.com&bcc=bccw@mail.com&subject=✍🏼🌡🌞&body=Dear visitor, Hope you enjoy the Weather App"
+        >
+          &nbsp Send a word 🖊
+        </a>
+      </span>
+    </p>
+    <script src="script.js"></script>
+  </body>
+</html>
