@@ -9,7 +9,7 @@ let days = [
   "Wednesday",
   "Tuesday",
   "Friday",
-  "Saterday"
+  "Saterday",
 ];
 let day = days[currentTime.getDay()];
 //alert(day);
@@ -41,7 +41,7 @@ function searchCity(event) {
     citySearch(cityInput.value);
   } else {
     city.innerHTML = null;
-    city.innerHTML = "Fell asleep watting ...😴";
+    city.innerHTML = "Fell asleep waiting ...😴";
   }
 }
 function citySearch(city) {
