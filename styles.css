@@ -88,6 +88,7 @@ h1 {
   color: #f79e1c;
   position: absolute;
   left: 138px;
+  line-height: 1.7;
 }
 
 #weather-status {
