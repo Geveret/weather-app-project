@@ -44,6 +44,10 @@ div input.form-control {
   width: 210px;
 }
 
+#city-input {
+  font-size: 13px;
+  color: grey;
+}
 .search-icon {
   font-size: 22px;
   color: silver;
