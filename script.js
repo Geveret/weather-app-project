@@ -66,6 +66,8 @@ function showTemp(response) {
   wind.innerHTML = response.data.wind.speed;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 // navagetion bar
@@ -97,20 +99,40 @@ let button = document.querySelector("#my-location");
 button.addEventListener("click", getCurrentPosition);
 
 //3
+// function changeTempf(event) {
+//   event.preventDefault();
+//   temperatureF.innerHTML = "83";
+// }
+// let temperatureF = document.querySelector("#degrees");
+// let unitF = document.querySelector("#unit-farenheit");
+// unitF.addEventListener("click", changeTempf);
+
+// function changeTempC(event) {
+//   event.preventDefault();
+//   temperatureC.innerHTML = "28";
+// }
+// let temperatureC = document.querySelector("#degrees");
+// let unitC = document.querySelector("#unit-celsius");
+// unitC.addEventListener("click", changeTempC);
+
 function changeTempf(event) {
   event.preventDefault();
-  temperatureF.innerHTML = "83";
+  let temperatureElement = document.querySelector("#degrees");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  //alert(fahrenheiTemperature);
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
-let temperatureF = document.querySelector("#degrees");
-let unitF = document.querySelector("#unit-farenheit");
-unitF.addEventListener("click", changeTempf);
 
 function changeTempC(event) {
   event.preventDefault();
-  temperatureC.innerHTML = "28";
+  let temperatureElement = document.querySelector("#degrees");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-let temperatureC = document.querySelector("#degrees");
+
+let celsiusTemperature = null;
+
+let unitF = document.querySelector("#unit-fahrenheit");
+unitF.addEventListener("click", changeTempf);
+
 let unitC = document.querySelector("#unit-celsius");
 unitC.addEventListener("click", changeTempC);
-
-// let temperatureF = Math.round((temperature * 9) / 5 + 32);/ / for later...

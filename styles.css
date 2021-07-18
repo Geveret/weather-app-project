@@ -127,7 +127,7 @@ strong.degrees {
   cursor: pointer;
 }
 
-.degrees-unit-farenheit {
+.degrees-unit-fahrenheit {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-size: 16px;
@@ -135,9 +135,10 @@ strong.degrees {
   position: absolute;
   top: 252px;
   left: 288px;
+  color: #95d7f6df;
 }
 
-#unit-farenheit:hover {
+#unit-fahrenheit:hover {
   color: #95d7f6df;
   cursor: pointer;
 }
