@@ -118,6 +118,10 @@ button.addEventListener("click", getCurrentPosition);
 function changeTempf(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#degrees");
+  // remove active state  from unitC (celsius)
+  unitC.classList.remove("active");
+  // add active state  from unitF (fahrenheiT)
+  unitF.classList.add("active");
   let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
   //alert(fahrenheiTemperature);
   temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
@@ -125,6 +129,10 @@ function changeTempf(event) {
 
 function changeTempC(event) {
   event.preventDefault();
+  // add active state  from unitC (celsius)
+  unitC.classList.add("active");
+  // remove active state  from unitF (fahrenheiT)
+  unitF.classList.remove("active");
   let temperatureElement = document.querySelector("#degrees");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }

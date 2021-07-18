@@ -2,7 +2,7 @@ body {
   margin: 20px auto;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: rgb(255, 255, 255);
+  color: #ffff;
   background-color: #5f79c0;
   display: block;
   margin: 30px auto;
@@ -106,7 +106,7 @@ strong.degrees {
 
 .degrees-unit-celsius {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  color: #95d7f6df;
   font-size: 16px;
   display: inline;
   position: absolute;
@@ -114,17 +114,21 @@ strong.degrees {
   left: 257px;
 }
 
+small.active {
+  color: #ffff;
+  font-weight: bold;
+}
+
 #line-gap {
-  font-size: 18px;
   font-size: 16px;
   display: inline;
   position: absolute;
   top: 252px;
   left: 281px;
 }
+
 #unit-celsius:hover {
-  color: #95d7f6df;
-  cursor: pointer;
+  cursor: default;
 }
 
 .degrees-unit-fahrenheit {
@@ -139,8 +143,7 @@ strong.degrees {
 }
 
 #unit-fahrenheit:hover {
-  color: #95d7f6df;
-  cursor: pointer;
+  cursor: default;
 }
 
 button.trans {
