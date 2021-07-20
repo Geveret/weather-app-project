@@ -66,7 +66,12 @@ function showTemp(response) {
   wind.innerHTML = response.data.wind.speed;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
-
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response / data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
 }
 
@@ -75,10 +80,12 @@ let mainCities = document.querySelectorAll(".cities a");
 mainCities.forEach(function (cityLink) {
   cityLink.addEventListener("click", navbarSearch);
 });
+
 function navbarSearch(event) {
   event.preventDefault();
   citySearch(event.target.innerHTML);
 }
+
 //user current location:
 function showPosition(position) {
   console.log(position);
@@ -115,11 +122,11 @@ button.addEventListener("click", getCurrentPosition);
 // let unitC = document.querySelector("#unit-celsius");
 // unitC.addEventListener("click", changeTempC);
 
+//3 Temperature uinits conversion:
 function changeTempf(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#degrees");
-  // remove active state  from unitC (celsius)
-  unitC.classList.remove("active");
+  unitC.classList.remove("active"); // remove active state  from unitC (celsius)
   // add active state  from unitF (fahrenheiT)
   unitF.classList.add("active");
   let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
@@ -129,10 +136,10 @@ function changeTempf(event) {
 
 function changeTempC(event) {
   event.preventDefault();
-  // add active state  from unitC (celsius)
-  unitC.classList.add("active");
-  // remove active state  from unitF (fahrenheiT)
-  unitF.classList.remove("active");
+
+  unitC.classList.add("active"); // add active state  to unitC (celsius)
+  unitF.classList.remove("active"); // remove active state  from unitF (fahrenheit)
+
   let temperatureElement = document.querySelector("#degrees");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
