@@ -54,7 +54,7 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 citySearch("Tel-Aviv");
 function showTemp(response) {
-  //console.log(response.data);
+  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let temperaturaElement = document.querySelector("#degrees");
   let description = document.querySelector("#weather-status");
@@ -66,10 +66,10 @@ function showTemp(response) {
   wind.innerHTML = response.data.wind.speed;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
-  let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector("#sun-icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response / data.weather[0].icon}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
@@ -122,23 +122,25 @@ button.addEventListener("click", getCurrentPosition);
 // let unitC = document.querySelector("#unit-celsius");
 // unitC.addEventListener("click", changeTempC);
 
-//3 Temperature uinits conversion:
+//3 Temperature units conversion:
+
 function changeTempf(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#degrees");
-  unitC.classList.remove("active"); // remove active state  from unitC (celsius)
+  // remove active state  from unitC (celsius)
+  unitC.classList.remove("active");
   // add active state  from unitF (fahrenheiT)
   unitF.classList.add("active");
+  let temperatureElement = document.querySelector("#degrees");
   let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
   //alert(fahrenheiTemperature);
   temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
-
 function changeTempC(event) {
   event.preventDefault();
-
-  unitC.classList.add("active"); // add active state  to unitC (celsius)
-  unitF.classList.remove("active"); // remove active state  from unitF (fahrenheit)
+  // add active state  to unitC (celsius)
+  unitC.classList.add("active");
+  // remove active state  from unitF (fahrenheit)
+  unitF.classList.remove("active");
 
   let temperatureElement = document.querySelector("#degrees");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
