@@ -67,6 +67,7 @@ function showTemp(response) {
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
   let iconElement = document.querySelector("#sun-icon");
+  let iconElementForcast = document.querySelector("#sun-s-icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

@@ -104,6 +104,7 @@ h1 {
 strong.degrees {
   font-size: 90px;
   font-weight: lighter;
+  text-align: center;
 }
 
 .degrees-unit-celsius {
@@ -187,6 +188,7 @@ div.col-dayli-forcast-2 {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 100%;
 }
 
 .day-temp {
@@ -194,16 +196,14 @@ div.col-dayli-forcast-2 {
 }
 
 .forcast-rain-wind {
-  text-align: center;
   font-size: 14px;
   text-align: center;
-  position: absolute;
+  /* position: absolute; */
   top: 390px;
-  right: 168px;
   margin-bottom: 20px;
-  margin-right: 0px;
+  width: 566px;
   margin-left: 0px;
-  left: 90px;
+  margin-right: 0px;
 }
 
 .footer {
