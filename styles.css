@@ -38,7 +38,7 @@ a {
 }
 
 div input.form-control {
-  width: 326px;
+  width: 270px;
 }
 .form-control me-2 {
   width: 210px;
@@ -77,6 +77,20 @@ h1 {
 .date-time {
   margin-top: 0;
   font-size: 14px;
+}
+
+#star-cities {
+  padding: 10px auto;
+  color: #ffff;
+  display: inline;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 25px;
+}
+
+#star-cities:hover {
+  color: cornflowerblue;
+  cursor: pointer;
 }
 
 .wheather-data {

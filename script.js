@@ -154,3 +154,16 @@ unitF.addEventListener("click", changeTempf);
 
 let unitC = document.querySelector("#unit-celsius");
 unitC.addEventListener("click", changeTempC);
+
+//Show/hide main nav-bar
+
+function showstarCity(click) {
+  let star = document.getElementById("nav-bar");
+  if (star.style.display === "none") {
+    star.style.display = "block";
+  } else {
+    star.style.display = "none";
+  }
+}
+let star = document.querySelector("#star-cities");
+star.addEventListener("click", showstarCity);
