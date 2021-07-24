@@ -33,7 +33,7 @@ a {
 }
 
 .container-fluid {
-  width: 624px;
+  width: 559px;
   padding-left: 0px;
 }
 
@@ -80,12 +80,10 @@ h1 {
 }
 
 #star-cities {
-  padding: 10px auto;
+  padding: 10px;
+  font-size: 15px;
   color: #ffff;
   display: inline;
-  padding-top: 5px;
-  padding-left: 10px;
-  font-size: 25px;
 }
 
 #star-cities:hover {
