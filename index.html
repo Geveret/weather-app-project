@@ -87,7 +87,7 @@
                 id="star-cities"
                 alt="Cities bar"
                 data-toggle="tooltip"
-                title="Show/Hide Cities Bar"
+                title="Show/Hide Cities bar"
               >
               </i>
             </form>
@@ -96,7 +96,7 @@
             <div class="whether-had">
               <h1 id="city-name">Tel-Aviv</h1>
               <div class="date-time">
-                Last updated: <span id="date-time"> Sunday 14:00</span>
+                Last update on <span id="date-time"> Sunday 14:00</span>
               </div>
               <div class="wheather-data">
                 <div class="row">
@@ -122,52 +122,31 @@
               </div>
             </div>
           </div>
-          <div class="row forcast-rain-wind">
+          <div class="row forecast-rain-wind">
             <div class="col-12">Precipitation 0%</div>
             <div class="col-12">Humidity <span id="humidity"> 48</span>%</div>
             <div class="col-12">Wind <span id="wind"> 13</span>km/h</div>
           </div>
-
           <!-- end "weather-info" div -->
-
-          <div class="row forcast">
-            <button class="trans"></button>
-            <div class="col-dayli-forcast-2 day">
-              Wed
-              <div class="day-icon">
-                <i class="fas fa-cloud-sun" id="sun-s-icon"></i>
-                <div class="day-temp">28º</div>
-              </div>
-            </div>
-            <div class="col-dayli-forcast-2 day">
-              Tue
-              <div class="day-icon">
-                <i class="fas fa-sun" id="sun-s-icon"></i>
-                <div class="day-temp">29º</div>
-              </div>
-            </div>
-            <div class="col-dayli-forcast-2 day">
-              Fri
-              <div class="day-icon">
-                <i class="fas fa-cloud-sun" id="sun-s-icon"></i>
-                <div class="day-temp">28º</div>
-              </div>
-            </div>
-            <div class="col-dayli-forcast-2 day">
-              Sat
-              <div class="day-icon">
-                <i class="fas fa-sun" id="sun-s-icon"></i>
-                <div class="day-temp">29º</div>
-              </div>
-            </div>
-            <div class="col-dayli-forcast-2 day">
-              San
-              <div class="day-icon">
-                <i class="fas fa-cloud-sun" id="sun-s-icon"></i>
-                <div class="day-temp">28º</div>
+          <!-- start "weather-forecast" div -->
+          <button class="trans"></button>
+          <div class="weather-forecast">
+            <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">San</div>
+                <img
+                  src="http://openweathermap.org/img/wn/04n@2x.png"
+                  alt="broken clouds"
+                  width="50"
+                />
+                <div class="weather-forecast-temperature">
+                  <span class="weather-forecast-temperature-max"> 18º </span>
+                  <span class="weather-forecast-temperature-min"> 12º </span>
+                </div>
               </div>
             </div>
           </div>
+          <!-- end "weather-forecast" div -->
         </div>
         <!-- close card-body -->
       </div>
