@@ -13,7 +13,7 @@ body {
 
 div .card {
   border-radius: 20px;
-  width: 600px;
+  width: 568px;
   background-color: #2f48a4;
   height: 631px;
 }
@@ -78,6 +78,7 @@ h1 {
 .date-time {
   margin-top: 0;
   font-size: 14px;
+  font-weight: lighter;
 }
 
 #star-cities {
@@ -100,11 +101,10 @@ h1 {
   font-size: 50px;
   color: #f79e1c;
   position: absolute;
-  left: 236px;
-  line-height: -3.3;
   bottom: 298px;
   width: 97px;
   top: 220px;
+  left: 229px;
 }
 
 #weather-status {
@@ -119,7 +119,7 @@ strong.degrees {
   font-size: 90px;
   font-weight: lighter;
   text-align: center;
-  padding-left: 200px;
+  padding-left: 186px;
 }
 
 .degrees-unit-celsius {
@@ -168,10 +168,11 @@ small.active {
   position: absolute;
   top: 404px;
   margin-bottom: 20px;
-  width: 566px;
+  left: 16px;
+  right: 16px;
   margin-left: 0px;
   margin-right: 0px;
-  width: 563px;
+  width: 539px;
 }
 .weather-forecast {
   margin-top: 94px;
