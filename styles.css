@@ -201,6 +201,7 @@ button.trans {
   position: absolute;
   left: 16px;
   top: 504px;
+  cursor: default;
 }
 
 .footer {

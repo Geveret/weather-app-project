@@ -28,6 +28,36 @@ if (minutes < 10) {
 let h1 = document.querySelector("#date-time");
 h1.innerHTML = `${day} ${hour}:${minutes}`;
 
+// display forecast:
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+                <div class="col-2">
+                  <div class="weather-forecast-date">${day}</div>
+                  <img
+                    src="http://openweathermap.org/img/wn/04n@2x.png"
+                    alt="broken clouds"
+                    width="50"
+                  />
+                  <div class="weather-forecast-temperature">
+                    <span class="weather-forecast-temperature-max"> 18º </span>
+                    <span class="weather-forecast-temperature-min"> 12º </span>
+                  </div>
+                </div>
+              `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  // console.log(forecastHTML);
+}
+
 //2
 function searchCity(event) {
   event.preventDefault();
@@ -53,6 +83,7 @@ function citySearch(city) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 citySearch("Tel-Aviv");
+displayForecast();
 function showTemp(response) {
   console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
@@ -73,6 +104,7 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
   celsiusTemperature = response.data.main.temp;
 }
 
@@ -106,25 +138,7 @@ function getCurrentPosition() {
 let button = document.querySelector("#my-location");
 button.addEventListener("click", getCurrentPosition);
 
-//3
-// function changeTempf(event) {
-//   event.preventDefault();
-//   temperatureF.innerHTML = "83";
-// }
-// let temperatureF = document.querySelector("#degrees");
-// let unitF = document.querySelector("#unit-farenheit");
-// unitF.addEventListener("click", changeTempf);
-
-// function changeTempC(event) {
-//   event.preventDefault();
-//   temperatureC.innerHTML = "28";
-// }
-// let temperatureC = document.querySelector("#degrees");
-// let unitC = document.querySelector("#unit-celsius");
-// unitC.addEventListener("click", changeTempC);
-
 //3 Temperature units conversion:
-
 function changeTempf(event) {
   event.preventDefault();
   // remove active state  from unitC (celsius)
