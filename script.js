@@ -7,7 +7,7 @@ let days = [
   "Monday",
   "Tuesday",
   "Wednesday",
-  "Tuesday",
+  "Thursday",
   "Friday",
   "Saterday",
 ];
@@ -33,7 +33,7 @@ h1.innerHTML = `${day} ${hour}:${minutes}`;
 function formatDay(timestemp) {
   let date = new Date(timestemp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Tue", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }

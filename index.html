@@ -123,29 +123,21 @@
             </div>
           </div>
           <div class="row forecast-rain-wind">
-            <div class="col-12">Precipitation 0%</div>
-            <div class="col-12">Humidity <span id="humidity"> 48</span>%</div>
-            <div class="col-12">Wind <span id="wind"> 13</span>km/h</div>
+            <!-- <div class="col-12">Precipitation 0%</div> -->
+            <div class="col-12">
+              <i class="fas fa-tint"></i>
+              Humidity &nbsp;
+              <span id="humidity">00 </span>%
+            </div>
+            <div class="col-12">
+              <i class="fas fa-wind"></i> Wind &nbsp;
+              <span id="wind">00</span> km/h
+            </div>
           </div>
           <!-- end "weather-info" div -->
           <!-- start "weather-forecast" div -->
           <button class="trans"></button>
-          <div class="weather-forecast" id="forecast">
-            <div class="row">
-              <div class="col-2">
-                <div class="weather-forecast-date">Sun</div>
-                <img
-                  src="http://openweathermap.org/img/wn/04n@2x.png"
-                  alt="broken clouds"
-                  width="50"
-                />
-                <div class="weather-forecast-temperature">
-                  <span class="weather-forecast-temperature-max"> 18º </span>
-                  <span class="weather-forecast-temperature-min"> 12º </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
           <!-- end "weather-forecast" div -->
         </div>
         <!-- close card-body -->
