@@ -1,11 +1,12 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: #e4eaff;
+  color: #ffffff;
   /* background-color: #5f79c0; */
   display: block;
   margin: 0px auto;
   background-color: #5f79c0;
+  background-image: url("https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1952&q=80");
 }
 .container {
   width: 576px;
@@ -18,7 +19,8 @@ div .card {
   /* background-image: linear-gradient(rgba(60, 0, 255, 0.589), rgba(0, 0, 0, 0.5)),
     url("https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"); */
 
-  background-color: #2f48a4;
+  /* background-color: #2f48a4b9; */
+  background-color: rgba(0, 47, 85, 0.678);
 }
 
 div.crowded-house {
@@ -191,12 +193,13 @@ small.active {
 .weather-forecast-date {
   font-size: 14px;
   color: #a7a7a8df;
+  font-weight: 500;
 }
 .weather-forecast-temperature {
   font-size: 14px;
 }
 .weather-forecast-temperature-min {
-  color: #a7a7a8df;
+  color: #bdbdbde8;
   font-size: 14px;
 }
 
