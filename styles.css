@@ -1,11 +1,11 @@
 body {
-  margin: 20px auto;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: #ffff;
-  background-color: #5f79c0;
+  color: #e4eaff;
+  /* background-color: #5f79c0; */
   display: block;
-  margin: 30px auto;
+  margin: 0px auto;
+  background-color: #5f79c0;
 }
 .container {
   width: 576px;
@@ -14,14 +14,19 @@ body {
 div .card {
   border-radius: 20px;
   width: 568px;
-  background-color: #2f48a4;
   height: 631px;
+  /* background-image: linear-gradient(rgba(60, 0, 255, 0.589), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"); */
+
+  background-color: #2f48a4;
 }
 
 div.crowded-house {
-  font-family: "Kalam", cursive;
-  color: #e4eaff;
-  margin-bottom: 5px;
+  /* font-family: "Kalam", cursive; */
+  font-family: "Courgette", cursive;
+  color: #adbeff;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 .cities {
@@ -30,7 +35,7 @@ div.crowded-house {
 
 a {
   text-decoration: none;
-  color: #0dcaf0;
+  color: #adbeff;
 }
 
 .container-fluid {
@@ -177,6 +182,7 @@ small.active {
   margin-right: 0px;
   width: 539px;
 }
+
 .weather-forecast {
   margin-top: 94px;
   text-align: center;
@@ -191,33 +197,46 @@ small.active {
 }
 .weather-forecast-temperature-min {
   color: #a7a7a8df;
+  font-size: 14px;
 }
 
 button.trans {
   font-weight: 200;
-  border-width: 1px;
+  border-width: 0;
   border-color: #59abf869;
   background-color: #ccd2ea18;
   border-radius: 10px;
-  width: 75px;
-  height: 111px;
+  width: 71px;
+  height: 103px;
   position: absolute;
   left: 16px;
-  top: 504px;
+  top: 515px;
   cursor: default;
 }
-
+button.active {
+  font-weight: 200;
+  border-width: 0;
+  border-color: #59abf869;
+  background-color: #ccd2ea18;
+  border-radius: 10px;
+  width: 71px;
+  height: 108px;
+  position: absolute;
+  left: 16px;
+  top: 489px;
+  cursor: default;
+}
 .footer {
   color: #a7a7a8df;
   text-align: center;
   font-size: 12px;
 }
 
-a {
+a.contact {
   color: #a7a7a8df;
   text-decoration: none;
 }
 
 .email:hover {
-  color: #59a2e6b9;
+  color: #0a58ca;
 }

@@ -200,14 +200,20 @@ let unitC = document.querySelector("#unit-celsius");
 unitC.addEventListener("click", changeTempC);
 
 //Show/hide main nav-bar
-
-function showstarCity(click) {
+function showstarCity(event) {
+  event.preventDefault();
   let star = document.getElementById("nav-bar");
   if (star.style.display === "none") {
     star.style.display = "block";
+    today.classList.remove("active");
   } else {
+    event.preventDefault();
     star.style.display = "none";
+    today.classList.add("active");
   }
 }
+
+let today = document.querySelector("#today");
+today.classList.remove("active");
 let star = document.querySelector("#star-cities");
 star.addEventListener("click", showstarCity);
